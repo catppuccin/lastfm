@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          Last.fm Catppuccin
 @namespace      github.com/catppuccin/lastfm
-@version        1.0.0
+@version        1.0.1
 @description    Soothing pastel theme for Last.fm
 @author         Catppuccin
 @updateURL      https://github.com/catppuccin/anilist/raw/main/src/LastfmCatppuccin.user.css
@@ -624,6 +624,10 @@
         background-color: var(--accent);
         color: var(--text);
     }
+    input[type=password] {
+        background-color: var(--crust) !important;
+        border-color: var(--crust) !important;
+    }
     
     
     @-webkit-keyframes AnimationName {
@@ -1244,5 +1248,13 @@
     /*-------PLAYLISTS---------*/
     .chartlist-timestamp {
         color: var(--subtext0);
+    }
+    /*-----GENRES TODAY-----*/
+    .genretodaybar, .rolling_no {
+        background: var(--mantle) !important;
+    }
+    /*-----NAV ITEMS-----*/
+    .library-controls .secondary-nav .secondary-nav-item-link--active, .date-range-picker-button-inner, .library-controls .secondary-nav .secondary-nav-item-link--active:focus, .library-controls .secondary-nav .secondary-nav-item-link--active:hover {
+        color: var(--accent);
     }
 }
