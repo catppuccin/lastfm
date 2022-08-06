@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name          Last.fm Catppuccin
 @namespace      github.com/catppuccin/lastfm
-@version        1.0.1
+@version        1.0.2
 @description    Soothing pastel theme for Last.fm
 @author         Catppuccin
 @updateURL      https://github.com/catppuccin/anilist/raw/main/src/LastfmCatppuccin.user.css
 @preprocessor   stylus
 @var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*", "Mocha-Old"]
 @var select accent "Accent" ["Rosewater*", "Flamingo", "Pink", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender", "Gray"]
+@var checkbox removepromos "Remove Advertisements" 1
 ==/UserStyle== */
 @-moz-document domain("last.fm") {
 
@@ -271,7 +272,15 @@
         --text: rgb($text);
     }
     
-    
+    /*-----------REMOVE PRO SUBSCRIPTION REMINDERS------*/
+    if removepromos {
+        .your-progress .buffer-2, .secondary-nav-item--month, .secondary-nav-item--year, .auth-dropdown-pro-text {
+            display: none !important;
+        }
+        .listening-report-promo--month, .listening-report-promo--year {
+            display: none !important;
+        }
+    }
     
     /* HOME PAGE */
     
@@ -1214,7 +1223,7 @@
     /*-----Primary Button------*/
     .btn-primary, .btn-primary:hover, .btn-primary:active, .no-data-message-button, .no-data-message-button:hover, .no-data-message-button:active {
         background-color: var(--accent) !important;
-        color: var(--base);
+        color: var(--base) !important;
     }
     /*------FOOTER-----*/
     .footer-heading {
@@ -1254,7 +1263,20 @@
         background: var(--mantle) !important;
     }
     /*-----NAV ITEMS-----*/
-    .library-controls .secondary-nav .secondary-nav-item-link--active, .date-range-picker-button-inner, .library-controls .secondary-nav .secondary-nav-item-link--active:focus, .library-controls .secondary-nav .secondary-nav-item-link--active:hover {
+    .library-controls .secondary-nav .secondary-nav-item-link--active, .date-range-picker-button-inner, .library-controls .secondary-nav .secondary-nav-item-link--active:focus, .library-controls .secondary-nav .secondary-nav-item-link--active:hover, body:not([data-whatinput=touch]) .catalogue-tags .tag a:hover {
+        color: var(--accent) !important;
+    }
+    /*------ARTIST TAGS-----*/
+    .catalogue-tags .tag a, .catalogue-tags .tags-add, .catalogue-tags .tags-add-cta, body:not([data-whatinput=touch]) .catalogue-tags .tag a:hover {
         color: var(--accent);
+        box-shadow: inset 0 0 0 1px var(--accent-dim);
+    }
+    .catalogue-tags .tags-add::before {
+        background-image: none !important;
+        color: var(--accent);
+    }
+    /*-----HIDE PLAY BUTTON ON TOP TRACK------*/
+    .image-overlay-playlink-link:before {
+        display: none;
     }
 }
