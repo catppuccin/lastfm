@@ -218,6 +218,8 @@
 		}
     } else if (accent=="Peach") {
         :root {
+            --accent: rgb($peach) !important;
+            --accent-dim: rgba($peach, 0.5) !important;
 		}
     } else if (accent=="Yellow") {
         :root {
