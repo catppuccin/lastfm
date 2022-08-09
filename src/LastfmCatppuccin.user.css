@@ -1281,4 +1281,14 @@
     .image-overlay-playlink-link:before {
         display: none;
     }
+    /*---------CHARTS FIX---------*/
+    .globalchart .globalchart-item:first-child {
+        background-color: rgba($mantle, 0.8);
+    }
+    .globalchart-item:first-child .globalchart-rank {
+        color: var(--accent) !important;
+    }
+    .globalchart-item .globalchart-rank {
+        color: var(--text);
+    }
 }
