@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          Last.fm Catppuccin
 @namespace      github.com/catppuccin/lastfm
-@version        1.0.2
+@version        1.0.3
 @description    Soothing pastel theme for Last.fm
 @author         Catppuccin
 @updateURL      https://github.com/catppuccin/anilist/raw/main/src/LastfmCatppuccin.user.css
@@ -949,11 +949,12 @@
     .resource-external-link:hover {
         color: var(--text);
     }
-    
+    .shout { border-bottom: 1px solid rgb($surface0); }
+    .shout-container--active { background-color: rgba($surface1, 0.3);}
     .shout-user a {
         color: var(--text);
     }
-    
+    .shout-form { border: none;}
     .js-playlink-station.desktop-playlink.inline-section-control.stationlink {
         color: var(--text);
     }
@@ -1157,7 +1158,9 @@
     .inbox-notifications .inbox-notifications__item--highlight {
          background-color: var(--overlay);
     }
-    
+    .inbox-notifications .inbox-notifications__item--hover {
+        box-shadow: none;
+    }
     .inbox-notifications__item--highlight-hover:hover {
         background-color: var(--crust);
     }
