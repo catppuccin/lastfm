@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name          Last.fm Catppuccin
 @namespace      github.com/catppuccin/lastfm
-@version        1.0.3
+@version        1.0.4
 @description    Soothing pastel theme for Last.fm
 @author         Catppuccin
-@updateURL      https://github.com/catppuccin/anilist/raw/main/src/LastfmCatppuccin.user.css
+@updateURL      https://github.com/catppuccin/lastfm/raw/main/src/LastfmCatppuccin.user.css
 @preprocessor   stylus
 @var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*", "Mocha-Old"]
 @var select accent "Accent" ["Rosewater*", "Flamingo", "Pink", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender", "Gray"]
@@ -884,7 +884,10 @@
     .user-list-name {
         color: var(--text);
     }
-    
+    .user-follow, .user-follow:after {
+        color: var(--accent);
+        background-color: rgb($surface0);
+    }
     
     
     
