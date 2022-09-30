@@ -1136,7 +1136,12 @@
     
     .modal-dialog.popup_content,
     .modal-content {
-        background-color: var(--overlay);
+        background-color: var(--mantle);
+        box-shadow: none;
+    }
+    
+    .modal-body {
+        background-color: var(--base);
         box-shadow: none;
     }
     
