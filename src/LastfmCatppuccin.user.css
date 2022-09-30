@@ -296,7 +296,7 @@
         border-top: 1px solid var(--accent-dim);
     }
     
-    .homefeed .content-top .secondary-nav-item-link--active {
+    .homefeed .content-top .secondary-nav-item-link--active, .home-welcome-header {
         color: var(--text);
     }
     .secondary-nav-item-link {
