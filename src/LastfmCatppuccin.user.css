@@ -1280,8 +1280,9 @@
         box-shadow: inset 0 0 0 1px var(--accent-dim);
     }
     .catalogue-tags .tags-add::before {
-        background-image: none !important;
-        color: var(--accent);
+        background-image: none;
+        mask-image: url("/static/images/icons/add_link_16.637996ed0e2f.png");
+        background-color: var(--accent);
     }
     /*-----HIDE PLAY BUTTON ON TOP TRACK------*/
     .image-overlay-playlink-link:before {
