@@ -1078,6 +1078,12 @@
         background-color: var(--overlay);
     }
     
+    .alert-warning::before {
+        background-image: none;
+        mask-image: url("/static/images/icons/alert/warning_16.93f2fe437139.png");
+        background-color: rgb($peach);
+    }
+    
     .content-form textarea,
     .content-form input[type="text"]
     {
