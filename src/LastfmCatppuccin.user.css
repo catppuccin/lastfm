@@ -1046,6 +1046,14 @@
     .highcharts-plot-bands-0 > path {
         fill: var(--overlay);
     }
+  
+    .highcharts-area {
+        fill: rgba($red, 0.1);
+    }
+  
+    .highcharts-graph {
+        stroke: rgb($red);
+    }
     
     .similar-items-sidebar-item-name {
         color: var(--text);
