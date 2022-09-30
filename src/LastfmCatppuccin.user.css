@@ -1233,6 +1233,11 @@
         background-color: var(--accent) !important;
         color: var(--base) !important;
     }
+    /*-----Shortcut Button------*/
+    .btn-shortcut, .btn-shortcut:hover, .btn-shortcut:active {
+        background-color: var(--accent-dim) !important;
+        color: var(--text) !important;
+    }
     /*------FOOTER-----*/
     .footer-heading {
         color: var(--subtext0);
