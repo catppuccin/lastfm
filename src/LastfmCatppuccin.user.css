@@ -1124,6 +1124,13 @@
         background: var(--base);
     }
     
+    .cta-link::before,
+    .lyrics-snippet-more-link ::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/arrow_small_right_005399_12.8f025ef116be.png");
+        background-color: var(--accent);
+    }
+    
     
     
     
