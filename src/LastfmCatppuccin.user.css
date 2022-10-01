@@ -1308,6 +1308,29 @@
         background-color: var(--overlay0) !important;
         color: var(--text) !important;
     }
+    
+    .masthead-search-toggle::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/search_16.bde37072495a.png");
+        background-color: var(--text);
+    }
+    
+    .masthead-search-toggle:hover:before,
+    .masthead-search-toggle:focus:before {
+        background-color: var(--subtext0);
+    }
+    
+    .masthead-search-toggle.disclose-active::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/delete_999_24.78e2a3de3ab8.png");
+        background-color: var(--text);
+    }
+    
+    .masthead-search-toggle.disclose-active:hover:before,
+    .masthead-search-toggle.disclose-active:focus:before {
+        background-color: var(--subtext0);
+    }
+  
     /*-------PLAYLISTS---------*/
     .chartlist-timestamp {
         color: var(--subtext0);
