@@ -622,6 +622,25 @@
         background-color: var(--subtext0);  
     }
     
+    .lazy-buylinks-toggle::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/download_sprite_16.2d7999c89e09.png");
+        background-color: var(--text);
+    }
+    
+    .chartlist-more-button::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/more_sprite_16.bceb4a93c77a.png");
+        background-color: var(--text);
+    }
+    
+    .lazy-buylinks-toggle:hover:before,
+    .lazy-buylinks-toggle:focus:before,
+    .chartlist-more-button:hover:before,
+    .chartlist-more-button:focus:before {
+        background-color: var(--subtext0);
+    }
+    
     .text-colour-link, h2 {
         color: var(--accent);
     }
@@ -725,6 +744,54 @@
     .chartlist tr:nth-child(1) td.chartlist-index {
         font-weight: bold;
         color: var(--accent);
+    }
+    
+    .chartlist-love-button::before, .header-new-love-button::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/love_animation_tracklist_24.3c884b0287d4.png");
+        background-color: var(--text);
+        mask-position:0 0;
+    }
+
+    .chartlist-love-button:focus:before,
+    .chartlist-love-button:hover:before,
+    .header-new-love-button:focus::before,
+    .header-new-love-button:hover::before {
+        mask-position:-24px 0
+        background-color: rgb($red);
+    }
+
+    [data-toggle-button-current-state=loved] .chartlist-love-button:before,
+    [data-toggle-button-current-state=loved] .header-new-love-button:before {
+        mask-position:-552px 0;
+        transition:mask-position .7s steps(23) !important;
+        background-color: rgb($red);
+    }
+
+    [data-toggle-button-current-state=loved] .chartlist-love-button:focus:before,
+    [data-toggle-button-current-state=loved] .chartlist-love-button:hover:before,
+    [data-toggle-button-current-state=loved] .header-new-love-button:focus::before,
+    [data-toggle-button-current-state=loved] .header-new-love-button:hover::before {
+        transition:mask-position .7s steps(22) !important;;
+    }
+    
+    .section-settings-toggle::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/settings_222_16.f63779d3cbad.png");
+        background-color: var(--text);
+    }
+    
+    .share-button-profile::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/share_222_16.9aba752fb1e9.png");
+        background-color: var(--text);
+    }
+    
+    .section-settings-toggle:hover:before,
+    .section-settings-toggle:focus:before,
+    .share-button-profile:hover:before,
+    .share-button-profile:focus:before, {
+        background-color: var(--subtext0);
     }
     
     
@@ -1068,6 +1135,27 @@
         color: var(--text);
     }
     
+    .cta-link::before,
+    .lyrics-snippet-more-link ::before,
+    .trending-tracks-more-link ::before,
+    .more-link-fullwidth-right ::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/arrow_small_right_005399_12.8f025ef116be.png");
+        background-color: var(--accent);
+    }
+    
+    .play-this-track-playlink--itunes::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/apple_music_color_24.17c0b1b9e185.png");
+        background-color: var(--text);
+    }
+    
+    .resource-external-link--homepage::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/external_links_16.3d45e81fa3fc.png");
+        background-color: var(--text);
+    }
+    
     
     
     
@@ -1088,6 +1176,12 @@
     .alert-warning {
         color: rgb($peach);
         background-color: var(--crust);
+    }
+    
+    .alert-warning::before {
+        background-image: none;
+        mask-image: url("/static/images/icons/alert/warning_16.93f2fe437139.png");
+        background-color: rgb($peach);
     }
     
     .content-form textarea,
@@ -1284,6 +1378,37 @@
         background-color: var(--overlay0) !important;
         color: var(--text) !important;
     }
+    
+    .masthead-search-toggle::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/search_16.bde37072495a.png");
+        background-color: var(--text);
+    }
+    
+    .masthead-search-toggle:hover:before,
+    .masthead-search-toggle:focus:before {
+        background-color: var(--subtext0);
+    }
+    
+    .masthead-search-toggle.disclose-active::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/delete_999_24.78e2a3de3ab8.png");
+        background-color: var(--text);
+    }
+    
+    .masthead-search-toggle.disclose-active:hover:before,
+    .masthead-search-toggle.disclose-active:focus:before {
+        background-color: var(--subtext0);
+    }
+    
+    .masthead-logo {
+        background-image: none !important;
+        mask-image: url("/static/images/logo_static.adb61955725c.png");
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background-color: rgb($red);
+    }
+  
     /*-------PLAYLISTS---------*/
     .chartlist-timestamp {
         color: var(--subtext0);
@@ -1302,8 +1427,9 @@
         box-shadow: inset 0 0 0 1px var(--accent-dim);
     }
     .catalogue-tags .tags-add::before {
-        background-image: none !important;
-        color: var(--accent);
+        background-image: none;
+        mask-image: url("/static/images/icons/add_link_16.637996ed0e2f.png");
+        background-color: var(--accent);
     }
     /*-----HIDE PLAY BUTTON ON TOP TRACK------*/
     .image-overlay-playlink-link:before {
