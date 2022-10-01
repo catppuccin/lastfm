@@ -1137,6 +1137,12 @@
         background-color: var(--text);
     }
     
+    .resource-external-link--homepage::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/external_links_16.3d45e81fa3fc.png");
+        background-color: var(--text);
+    }
+    
     
     
     
