@@ -296,7 +296,7 @@
         border-top: 1px solid var(--accent-dim);
     }
     
-    .homefeed .content-top .secondary-nav-item-link--active {
+    .homefeed .content-top .secondary-nav-item-link--active, .home-welcome-header {
         color: var(--text);
     }
     .secondary-nav-item-link {
@@ -1046,6 +1046,14 @@
     .highcharts-plot-bands-0 > path {
         fill: var(--overlay);
     }
+  
+    .highcharts-area {
+        fill: rgba($red, 0.1);
+    }
+  
+    .highcharts-graph {
+        stroke: rgb($red);
+    }
     
     .similar-items-sidebar-item-name {
         color: var(--text);
@@ -1055,6 +1063,9 @@
     }
     .shout--deleted, .shout--reported {
         background: var(--base);
+    }
+    .play-this-track-playlinks {
+        color: var(--text);
     }
     
     
@@ -1075,7 +1086,8 @@
     }
     
     .alert-warning {
-        background-color: var(--overlay);
+        color: rgb($peach);
+        background-color: var(--crust);
     }
     
     .content-form textarea,
@@ -1136,7 +1148,12 @@
     
     .modal-dialog.popup_content,
     .modal-content {
-        background-color: var(--overlay);
+        background-color: var(--mantle);
+        box-shadow: none;
+    }
+    
+    .modal-body {
+        background-color: var(--base);
         box-shadow: none;
     }
     
@@ -1232,6 +1249,11 @@
     .btn-primary, .btn-primary:hover, .btn-primary:active, .no-data-message-button, .no-data-message-button:hover, .no-data-message-button:active {
         background-color: var(--accent) !important;
         color: var(--base) !important;
+    }
+    /*-----Shortcut Button------*/
+    .btn-shortcut, .btn-shortcut:hover, .btn-shortcut:active {
+        background-color: var(--accent-dim) !important;
+        color: var(--text) !important;
     }
     /*------FOOTER-----*/
     .footer-heading {
