@@ -756,6 +756,17 @@
         transition:mask-position .7s steps(22);
     }
     
+    .section-settings-toggle::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/settings_222_16.f63779d3cbad.png");
+        background-color: var(--text);
+    }
+    
+    .section-settings-toggle:hover:before,
+    .section-settings-toggle:focus:before {
+        background-color: var(--subtext0);
+    }
+    
     
     
     
