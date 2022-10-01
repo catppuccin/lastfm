@@ -727,6 +727,35 @@
         color: var(--accent);
     }
     
+    .chartlist-love-button::before, .header-new-love-button::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/love_animation_tracklist_24.3c884b0287d4.png");
+        background-color: var(--text);
+        mask-position:0 0;
+    }
+
+    .chartlist-love-button:focus:before,
+    .chartlist-love-button:hover:before,
+    .header-new-love-button:focus::before,
+    .header-new-love-button:hover::before {
+        mask-position:-24px 0
+        background-color: rgb($red);
+    }
+
+    [data-toggle-button-current-state=loved] .chartlist-love-button:before,
+    [data-toggle-button-current-state=loved] .header-new-love-button:before {
+        mask-position:-552px 0;
+        transition:mask-position .7s steps(23);
+        background-color: rgb($red);
+    }
+
+    [data-toggle-button-current-state=loved] .chartlist-love-button:focus:before,
+    [data-toggle-button-current-state=loved] .chartlist-love-button:hover:before,
+    [data-toggle-button-current-state=loved] .header-new-love-button:focus::before,
+    [data-toggle-button-current-state=loved] .header-new-love-button:hover::before {
+        transition:mask-position .7s steps(22);
+    }
+    
     
     
     
