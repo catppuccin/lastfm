@@ -1131,6 +1131,12 @@
         background-color: var(--accent);
     }
     
+    .play-this-track-playlink--itunes::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/apple_music_color_24.17c0b1b9e185.png");
+        background-color: var(--text);
+    }
+    
     
     
     
