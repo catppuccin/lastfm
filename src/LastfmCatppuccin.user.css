@@ -622,6 +622,25 @@
         background-color: var(--subtext0);  
     }
     
+    .lazy-buylinks-toggle::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/download_sprite_16.2d7999c89e09.png");
+        background-color: var(--text);
+    }
+    
+    .chartlist-more-button::before {
+        background-image: none !important;
+        mask-image: url("/static/images/icons/more_sprite_16.bceb4a93c77a.png");
+        background-color: var(--text);
+    }
+    
+    .lazy-buylinks-toggle:hover:before,
+    .lazy-buylinks-toggle:focus:before,
+    .chartlist-more-button:hover:before,
+    .chartlist-more-button:focus:before {
+        background-color: var(--subtext0);
+    }
+    
     .text-colour-link, h2 {
         color: var(--accent);
     }
