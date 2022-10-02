@@ -1361,7 +1361,7 @@
     [data-toggle-button-current-state=loved] .header-new-love-button:before {
         mask-position: -552px 0;
         transition: mask-position .7s steps(23) !important;
-        transition: -webkit-mask-position .7s steps(23) !important;
+        -webkit-transition: -webkit-mask-position .7s steps(23) !important;
         background-color: rgb($red);
     }
 
@@ -1370,7 +1370,7 @@
     [data-toggle-button-current-state=loved] .header-new-love-button:focus::before,
     [data-toggle-button-current-state=loved] .header-new-love-button:hover::before {
         transition: mask-position .7s steps(22) !important;
-        transition: -webkit-mask-position .7s steps(22) !important;
+        -webkit-transition: -webkit-mask-position .7s steps(22) !important;
     }
 
     .section-settings-toggle::before {
