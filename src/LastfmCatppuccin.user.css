@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          Last.fm Catppuccin
 @namespace      github.com/catppuccin/lastfm
-@version        1.0.6
+@version        1.0.7
 @description    Soothing pastel theme for Last.fm
 @author         Catppuccin
 @updateURL      https://github.com/catppuccin/lastfm/raw/main/src/LastfmCatppuccin.user.css
@@ -392,7 +392,12 @@
     .mpu-subscription-upsell--mpu {
         display: none;
     }
-
+    .join-cta {
+        background-color: transparent;
+    }
+    .join-cta h3 {
+        color: var(--accent);
+    }
 
 
     .lazy-features-footer {
@@ -447,7 +452,11 @@
         background-color: var(--base);
     }
 
-
+    /* PROFILE */
+     /* BANNER */
+     .header--overview .header-background {
+        opacity: 0.4;
+     }
 
 
 
@@ -1327,7 +1336,10 @@
         background-color: var(--mantle);
         color: var(--text);
     }
-    .footer-bottom .row {
+    .footer .footer-bottom {
+        border-top: none;
+    }
+    .footer .footer-bottom .row {
         background-color: var(--mantle);
     }
     .footer .footer-language--active, .footer-timezone strong, .footer .footer-language--active strong {
@@ -1341,7 +1353,7 @@
         background: var(--mantle);
         color: var(--text) !important;
     }
-    .masthead-nav-control {
+    .masthead-nav-control, .site-auth-control, .site-auth--anon:before, .masthead-nav .navlist-more {
         color: var(--text) !important;
     }
     .auth-dropdown-menu {
@@ -1354,9 +1366,17 @@
         background-color: var(--overlay0) !important;
         color: var(--text) !important;
     }
-    .masthead-nav .masthead-nav-control:focus, .masthead-nav .masthead-nav-control:hover {
+    .masthead-nav .masthead-nav-control:focus,
+    .masthead-nav .masthead-nav-control:hover,
+    .masthead-nav .navlist-more:focus,
+    .masthead-nav .navlist-more:hover,
+    .site-auth-control:focus,
+    .site-auth-control:hover {
         background-color: transparent;
         color: var(--accent) !important;
+    }
+    .site-auth-control.btn-secondary {
+        color: var(--base) !important;
     }
     /*-------PLAYLISTS---------*/
     .chartlist-timestamp {
