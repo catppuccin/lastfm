@@ -347,22 +347,22 @@
     {
         background-color: var(--accent-dim);
     }
-
-
-
-
-    .recs-feed .context {
-        background: #1d1d1d;
-        box-shadow: inset 1px 0 #252525,inset -1px -1px #0c0c0c;
-        color: #d8d8d8;
+    .recs-feed .recs-feed-cover-image-wrap:after {
+        background-image: linear-gradient(180deg, transparent 0, rgba($mantle, 0.4) 50%, rgba($mantle, 0.7) 50%, rgba($mantle, 0.7) 100%);
     }
 
+    .recs-feed .context {
+        background: var(--mantle);
+        box-shadow: inset 1px 0 #252525,inset -1px -1px var(--crust);
+        color: var(--text);
+    }
+    .recs-feed .recs-feed-item {
+        background: transparent;
+        box-shadow: none;
+    }
     a {
         color: var(--accent);
     }
-
-
-
     .stationlink-list .stationlink {
         color: var(--subtext0);
     }
@@ -486,14 +486,20 @@
         box-shadow: none;
         color: var(--subtext1);
     }
-    .recs-feed-item--artist .context:after {
+    .recs-feed-item--artist .context:after,
+    .recs-feed .recs-feed-item--artist .recs-feed-avatar:after {
         background-color: rgba($yellow,1) !important;
     }
-    .recs-feed-item--album .context:after {
+    .recs-feed-item--album .context:after,
+    .recs-feed .recs-feed-item--album .recs-feed-avatar:after {
         background-color: rgba($green,1) !important;
     }
-    .recs-feed-item--track .context:after {
+    .recs-feed-item--track .context:after,
+    .recs-feed .recs-feed-item--track .recs-feed-avatar:after {
         background-color: rgba($blue,1) !important;
+    }
+    .secondary-nav {
+        box-shadow: inset 0 -1px var(--accent);
     }
     .music-recommended-artists-artist-name,
     .music-recommended-artists-context,
