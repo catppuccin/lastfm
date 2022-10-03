@@ -644,7 +644,9 @@
     .header--overview {
         background-color: var(--mantle);
     }
-
+    .header-metadata .header-metadata-title, .header-scrobble-since, .header-title-display-name {
+        color: rgb($subtext1);
+    }
     .chartlist-play-button::before {
         background-color: var(--accent);
         -webkit-filter: invert(0%);
@@ -923,6 +925,23 @@
         background-color: rgb($surface0);
     }
 
+    /* FOLLOW BUTTON*/
+    [data-toggle-button-current-state=unfollowed] .header-follower-btn:before {
+        background-color: rgb($red);
+        color: var(--text);
+    }
+    [data-toggle-button-current-state=followed] .header-follower-btn:before {
+        background-color: rgb($green);
+        color: var(--text);
+    }
+    [data-toggle-button-current-state=followed] .header-follower-btn:hover:before {
+        background-color: rgb($red);
+        color: var(--text);
+    }
+
+    .header-follower-btn {
+        color: var(--accent);
+    }
 
 
 
@@ -933,7 +952,33 @@
         color: var(--text);
     }
 
-
+    /* TASTE-O-METER COLORS */
+    .tasteometer-donut-base {
+        fill: rgb($surface1);
+    }
+    .tasteometer-avatar img {
+        border: 2px solid rgb($surface1);
+    }
+    .tasteometer-compat-very_low .tasteometer-compat-colour {
+        color: rgb($subtext0);
+        fill: rgb($subtext0);
+    }
+    .tasteometer-compat-low .tasteometer-compat-colour {
+        color: rgb($mauve);
+        fill: rgb($mauve);
+    }
+    .tasteometer-compat-medium .tasteometer-compat-colour {
+        color: rgb($green);
+        fill: rgb($green);
+    }
+    .tasteometer-compat-very_high .tasteometer-compat-colour {
+        color: rgb($peach);
+        fill: rgb($peach);
+    }
+    .tasteometer-compat-super .tasteometer-compat-colour {
+        color: rgb($red);
+        fill: rgb($red);
+    }
 
 
 
