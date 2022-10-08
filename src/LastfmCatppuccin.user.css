@@ -646,7 +646,13 @@
     .header-avatar-add:not(.cta--inactive):hover{
         background-color: var(--accent-dim);
     }
-
+    .dropdown-menu-clickable,
+    #share-library-artist,
+    .dropdown-menu-clickable-item:active,
+    body:not([data-whatinput=touch]) .dropdown-menu-clickable-item:focus,
+    body:not([data-whatinput=touch]) .dropdown-menu-clickable-item:hover {
+        background-color: var(--base);
+    }
     .header--overview {
         background-color: var(--mantle);
     }
@@ -664,10 +670,22 @@
         background-color: var(--subtext0);
     }
 
-    .text-colour-link, h2 {
+    .text-colour-link, h2,
+    .dropdown-menu-clickable-item--selected,
+    .dropdown-menu-clickable-item--selected:focus,
+    .dropdown-menu-clickable-item--selected:hover,
+    .dropdown-menu-clickable-button,
+    .dropdown-menu-clickable-button:hover,
+    .dropdown-menu-clickable-button:active,
+    .dropdown-menu-clickable-button.disclose-active {
         color: var(--accent);
     }
-
+    .dropdown-menu-clickable-item,
+    .dropdown-menu-clickable-item:active,
+    body:not([data-whatinput=touch]) .dropdown-menu-clickable-item:focus,
+    body:not([data-whatinput=touch]) .dropdown-menu-clickable-item:hover {
+        color: var(--text);
+    }
     .btn-secondary {
         background-color: var(--accent-dim);
         color: var(--crust);
@@ -994,10 +1012,15 @@
     .section-with-separator::after {
         background-color: var(--base);
     }
-
+    .header-new-bookmark-button, .header-new-download-button, .header-new-love-button, .header-new-more-button,
+    body:not(.js-focus-visible) body:not([data-whatinput=touch]) .header-new-bookmark-button:focus, body:not(.js-focus-visible) body:not([data-whatinput=touch]) .header-new-download-button:focus, body:not(.js-focus-visible) body:not([data-whatinput=touch]) .header-new-love-button:focus, body:not(.js-focus-visible) body:not([data-whatinput=touch]) .header-new-more-button:focus, body:not([data-whatinput=touch]) .header-new-bookmark-button .focus-visible, body:not([data-whatinput=touch]) .header-new-bookmark-button:hover, body:not([data-whatinput=touch]) .header-new-download-button .focus-visible, body:not([data-whatinput=touch]) .header-new-download-button:hover, body:not([data-whatinput=touch]) .header-new-love-button .focus-visible, body:not([data-whatinput=touch]) .header-new-love-button:hover, body:not([data-whatinput=touch]) .header-new-more-button .focus-visible, body:not([data-whatinput=touch]) .header-new-more-button:hover {
+        color: var(--base);
+        background-color: var(--accent);
+    }
     .wiki-block-inner,
     .catalogue-metadata-heading,
-    .catalogue-metadata-description{
+    .catalogue-metadata-description,
+    .header-metadata-tnew-title {
        color: var(--subtext0);
     }
 
@@ -1045,6 +1068,9 @@
     .shout-form { border: none;}
     .js-playlink-station.desktop-playlink.inline-section-control.stationlink {
         color: var(--text);
+    }
+    .section-with-settings .section-control:before {
+        border-right: 1px solid var(--subtext0);
     }
 
     .header-metadata .header-metadata-display a {
@@ -1140,6 +1166,12 @@
         stroke: rgb($red);
     }
 
+    .coloured-cta {
+        background-color: rgba($surface2, 0.3)
+    }
+    .coloured-cta:not(.cta--inactive):focus, .coloured-cta:not(.cta--inactive):hover {
+        background-color: rgba($surface2, 0.7)
+    }
     .similar-items-sidebar-item-name {
         color: var(--text);
     }
@@ -1210,8 +1242,11 @@
     .content-form input[type=text]:hover:not([disabled]),
     .content-form input[type=url]:hover:not([disabled]),
     .content-form select:hover:not([disabled]),
-    .content-form textarea:hover:not([disabled]) {
+    .content-form textarea:hover:not([disabled]),
+    .content-form .inplace-field,
+    .inplace-field {
         border: 1px solid var(--crust);
+        color: var(--text)
     }
     .control-label {
         color: var(--accent);
@@ -1366,7 +1401,11 @@
     .no-data-message-button:active,
     .api-session-connect,
     .api-session-disconnect:hover,
-    .api-session-disconnect:active {
+    .api-session-disconnect:active,
+    .clipboard-button,
+    body:not(.js-focus-visible) body:not([data-whatinput=touch]) .clipboard-button:focus,
+    body:not([data-whatinput=touch]) .clipboard-button .focus-visible,
+    body:not([data-whatinput=touch]) .clipboard-button:hover {
         background-color: var(--accent) !important;
         color: var(--base) !important;
     }
