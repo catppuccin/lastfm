@@ -1468,6 +1468,16 @@
     .site-auth-control.btn-secondary {
         color: var(--base) !important;
     }
+    .masthead-search-form {
+        background-color: var(--mantle);
+    }
+    .masthead-search-submit {
+        background-color: var(--accent);
+        color: var(--base);
+    }
+    .masthead-search-field {
+        color: var(--text);
+    }
     /*-------PLAYLISTS---------*/
     .chartlist-timestamp {
         color: var(--subtext0);
