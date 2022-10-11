@@ -1475,6 +1475,12 @@
         background-color: var(--accent);
         color: var(--base);
     }
+    body:not(.js-focus-visible) body:not([data-whatinput=touch]) .masthead-search-submit:focus,
+    body:not([data-whatinput=touch]) .masthead-search-submit .focus-visible,
+    body:not([data-whatinput=touch]) .masthead-search-submit:hover {
+        background-color: var(--accent);
+        color: var(--base);
+    }
     .masthead-search-field {
         color: var(--text);
     }
