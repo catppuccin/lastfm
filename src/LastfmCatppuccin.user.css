@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name          Last.fm Catppuccin
 @namespace      github.com/catppuccin/lastfm
-@version        1.0.8
+@version        1.0.9
 @description    Soothing pastel theme for Last.fm
 @author         Catppuccin
 @updateURL      https://github.com/catppuccin/lastfm/raw/main/src/LastfmCatppuccin.user.css
@@ -691,7 +691,7 @@
     .chartlist-break::after,
     .chartlist-row::after
     {
-        border-bottom: 1px solid var(--overlay);
+        border-bottom: 1px solid rgb($surface0);
     }
 
     .chartlist-row:hover {
