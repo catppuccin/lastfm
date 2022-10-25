@@ -7,7 +7,7 @@
 @updateURL      https://github.com/catppuccin/lastfm/raw/main/src/LastfmCatppuccin.user.css
 @preprocessor   stylus
 @var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*", "Mocha-Old"]
-@var select accent "Accent" ["Rosewater*", "Flamingo", "Pink", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender", "Gray"]
+@var select accent-color "Accent" ["Rosewater*", "Flamingo", "Pink", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender", "Gray"]
 @var checkbox removepromos "Remove Advertisements" 1
 ==/UserStyle== */
 @-moz-document domain("last.fm") {
@@ -192,85 +192,42 @@
         }
     }
 
-    if (accent=="Rosewater") {
-        :root {
-            --accent: rgb($rosewater) !important;
-            --accent-dim: rgba($rosewater, 0.5) !important;
-        }
-    } else if (accent=="Flamingo") {
-        :root {
-            --accent: rgb($flamingo) !important;
-            --accent-dim: rgba($flamingo, 0.5) !important;
-		}
-    } else if (accent=="Pink") {
-        :root {
-            --accent: rgb($pink) !important;
-            --accent-dim: rgba($pink, 0.5) !important;
-		}
-    } else if (accent=="Mauve") {
-        :root {
-            --accent: rgb($mauve) !important;
-            --accent-dim: rgba($mauve, 0.5) !important;
-		}
-    } else if (accent=="Red") {
-        :root {
-            --accent: rgb($red) !important;
-            --accent-dim: rgba($red, 0.5) !important;
-		}
-    } else if (accent=="Maroon") {
-        :root {
-            --accent: rgb($maroon) !important;
-            --accent-dim: rgba($maroon, 0.5) !important;
-		}
-    } else if (accent=="Peach") {
-        :root {
-            --accent: rgb($peach) !important;
-            --accent-dim: rgba($peach, 0.5) !important;
-		}
-    } else if (accent=="Yellow") {
-        :root {
-            --accent: rgb($yellow) !important;
-            --accent-dim: rgba($yellow, 0.5) !important;
-		}
-    } else if (accent=="Green") {
-        :root {
-            --accent: rgb($green) !important;
-            --accent-dim: rgba($green, 0.5) !important;
-		}
-    } else if (accent=="Teal") {
-        :root {
-            --accent: rgb($teal) !important;
-            --accent-dim: rgba($teal, 0.5) !important;
-		}
-    } else if (accent=="Blue") {
-        :root {
-            --accent: rgb($blue) !important;
-            --accent-dim: rgba($blue, 0.5) !important;
-		}
-    } else if (accent=="Sapphire") {
-        :root {
-            --accent: rgb($sapphire) !important;
-            --accent-dim: rgba($sapphire, 0.5) !important;
-		}
-    } else if (accent=="Sky") {
-        :root {
-            --accent: rgb($sky) !important;
-            --accent-dim: rgba($sky, 0.5) !important;
-		}
-    } else if (accent=="Lavender") {
-        :root {
-            --accent: rgb($lavender) !important;
-            --accent-dim: rgba($lavender, 0.5) !important;
-		}
-    }  else if (accent=="Gray") {
-        :root {
-            --accent: rgb($subtext0) !important;
-            --accent-dim: rgba($subtext0, 0.5) !important;
-		}
+    if (accent-color=="Rosewater") {
+            $accent-color = $rosewater;
+    } else if (accent-color=="Flamingo") {
+            $accent-color = $flamingo
+    } else if (accent-color=="Pink") {
+        $accent-color = $pink
+    } else if (accent-color=="Mauve") {
+            $accent-color = $mauve
+    } else if (accent-color=="Red") {
+        $accent-color = $red
+    } else if (accent-color=="Maroon") {
+        $accent-color = $maroon
+    } else if (accent-color=="Peach") {
+        $accent-color = $peach
+    } else if (accent-color=="Yellow") {
+        $accent-color = $yellow
+    } else if (accent-color=="Green") {
+        $accent-color = $green
+    } else if (accent-color=="Teal") {
+        $accent-color = $teal
+    } else if (accent-color=="Blue") {
+        $accent-color = $blue
+    } else if (accent-color=="Sapphire") {
+        $accent-color = $sapphire
+    } else if (accent-color=="Sky") {
+        $accent-color = $sky
+    } else if (accent-color=="Lavender") {
+        $accent-color = $lavender
+    }  else if (accent-color=="Gray") {
+        $accent-color = $subtext0
     }
 
     /*-----------FOOTER---------*/
     :root {
+        --accent: rgb($accent-color) !important;
+        --accent-dim: rgba($accent-color, 0.5) !important;
         --crust: rgb($crust);
         --mantle: rgb($mantle);
         --base: rgb($base);
@@ -719,7 +676,7 @@
 
     .chartlist-row--highlight, .chartlist-row--now-scrobbling {
         /*background-color: #5a1717;*/
-        background: linear-gradient(300deg, var(--crust), var(--accent));
+        background: linear-gradient(270deg, var(--base) 60%, rgba($accent-color, 0.2));
         background-size: 200% 200%;
         -webkit-animation: AnimationName 10s ease infinite;
         -moz-animation: AnimationName 10s ease infinite;
