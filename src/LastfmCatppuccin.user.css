@@ -774,6 +774,22 @@
         color: var(--accent);
     }
 
+    .listening-report-top .secondary-nav {
+      border-bottom: 1px solid var(--overlay);
+    }
+    .listening-report-brick {
+      border: 1px solid var(--overlay);
+      &:focus, &:hover {
+        border: 1px solid var(--overlay);
+        box-shadow: none;
+      }
+    }
+    .listening-report-library-link {
+      &, &:hover {
+        color: var(--crust) !important;
+        background-color: var(--accent) !important;
+      }
+    }
     .user-dashboard-history-subscribe-banner-cta {
         display: none;
     }
@@ -1115,11 +1131,11 @@
         fill: var(--overlay);
     }
 
-    .highcharts-area {
+    .listener-trend .highcharts-area {
         fill: rgba($red, 0.1);
     }
 
-    .highcharts-graph {
+    .listener-trend .highcharts-graph {
         stroke: rgb($red);
     }
 
