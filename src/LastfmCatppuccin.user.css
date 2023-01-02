@@ -153,6 +153,39 @@
 
 	}
 
+	else if (theme=="Mocha-Old") {
+
+		$type = dark
+
+        $rosewater =     245, 224, 220
+        $flamingo =      242, 205, 205
+        $pink =          245, 194, 231
+        $mauve =         221, 182, 242
+        $red =           242, 143, 173
+        $maroon =        232, 161, 174
+        $peach =         248, 189, 150
+        $yellow =        250, 227, 176
+        $green =         171, 233, 179
+        $teal =          181, 232, 224
+        $blue =          150, 205, 251
+        $sapphire =      116, 199, 236
+        $sky =           137, 220, 235
+        $lavender =      201, 203, 255
+        $text =          217, 224, 238
+        $subtext1 =      195, 186, 198
+        $subtext0 =      152, 139, 162
+        $overlay2 =      110, 108, 126
+        $overlay1 =      87, 82, 104
+        $overlay0 =      108, 112, 134
+        $surface2 =      88, 91, 112
+        $surface1 =      69, 71, 90
+        $surface0 =      48, 45, 65
+        $base =          30, 30, 46
+        $mantle =        26, 24, 38
+        $crust =         22, 19, 32
+
+	}
+
     if(theme != "Latte") {
         :root {
         color-scheme: dark;
