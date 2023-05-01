@@ -243,7 +243,7 @@
             background-color: @accent-dim;
         }
         .recs-feed .recs-feed-cover-image-wrap:after {
-            background-image: linear-gradient(180deg, transparent 0, fade(@mantle, 0.4) 50%, fade(@mantle, 0.7) 50%, fade(@mantle, 0.7) 100%);
+            background-image: linear-gradient(180deg, transparent 0, rgba(@mantle, 0.4) 50%, rgba(@mantle, 0.7) 50%, rgba(@mantle, 0.7) 100%);
         }
 
         .recs-feed .context {
@@ -633,7 +633,7 @@
         .chartlist-row--highlight,
         .chartlist-row--now-scrobbling {
             /*background-color: #5a1717;*/
-            background: linear-gradient(270deg, @base 60%, fade(@accent, 0.2));
+            background: linear-gradient(270deg, @base 60%, rgba(@accent, 0.2));
             background-size: 200% 200%;
             -webkit-animation: AnimationName 10s ease infinite;
             -moz-animation: AnimationName 10s ease infinite;

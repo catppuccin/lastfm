@@ -44,6 +44,7 @@
 
 - [AnubisNekhet](https://github.com/AnubisNekhet)
 - [Gingeh](https://github.com/Gingeh)
+- [Isabel](https://github.com/isabelroses)
 
 &nbsp;
 
